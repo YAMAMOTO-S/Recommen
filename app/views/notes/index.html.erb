@@ -1,2 +1,4 @@
 <h1>notes index</h1>
-<%= @note %>
+<% @notes.each do |note| %>
+<%= note.title  %>
+<% end %>
