@@ -7,6 +7,7 @@
     <div>
       <p><%= note.title %></p>
       <%= image_tag(note.image_url.url, size: "200") %>
+      <%= markdown(note.content) %>
     </div>
   <% end %>
   
