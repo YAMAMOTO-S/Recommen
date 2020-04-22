@@ -11,5 +11,17 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require material_icons
  *= require_self
  */
+  @import 'materialize';
+
+  .nav-wrapper {
+    background-color: #FB9D7E;
+    .brand-logo {
+      margin-left: 100px;
+    }
+    .right-logo {
+      margin-right: 100px;
+    }
+  }

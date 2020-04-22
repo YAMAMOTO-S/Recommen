@@ -1,0 +1,10 @@
+<div>
+  <p><%= @nickname %></p>
+
+  <% @notes.each do |note| %>
+    <div>
+      <p><%= note.title %></p>
+    </div>
+  <% end %>
+  
+</div>
