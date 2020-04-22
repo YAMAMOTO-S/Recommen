@@ -2,5 +2,9 @@
 <%= form_with model: @note, local: true do |f| %>
   <%= f.text_field :title %>
   <%= f.text_field :content %>
-  <%= f.submit '投稿' %>
+  <div class="field">
+    <%= f.label :image_url %><br/>
+    <%= f.file_field :image_url %>
+  </div>
+  <a class="waves-effect waves-light btn-large btn-flat" style="margin-top: 30px"><%= f.submit 'submit', name: nil %></a>
 <% end %>

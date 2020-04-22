@@ -20,7 +20,7 @@ class NotesController < ApplicationController
 
   private
   def note_params
-    params.require(:note).permit(:title, :content).merge(user_id: current_user.id)
+    params.require(:note).permit(:title, :content, :image_url).merge(user_id: current_user.id)
   end
   
   def move_to_index
