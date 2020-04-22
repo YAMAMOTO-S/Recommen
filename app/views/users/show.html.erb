@@ -1,9 +1,12 @@
 <div>
   <p><%= @nickname %></p>
+    <%# user image %>
+  <%= image_tag(current_user.image.url, size: "200") %>
 
   <% @notes.each do |note| %>
     <div>
       <p><%= note.title %></p>
+      <%= image_tag(note.image_url.url, size: "200") %>
     </div>
   <% end %>
   
