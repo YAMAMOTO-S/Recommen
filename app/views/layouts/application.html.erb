@@ -15,7 +15,9 @@
         <a href="#" class="brand-logo">Recommen</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if user_signed_in? %>
-            <li class="head_user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
+            <% if current_user.image? %>
+              <li class="head_user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
+            <% end %>
             <li>Name: <%= current_user.nickname %></li>
             <li><a href="#"><%= link_to "HOME", root_path %></a></li>
             <li><a href="#"><%= link_to "Mypage", "/users/#{current_user.id}" %></a></li>

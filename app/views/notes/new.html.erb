@@ -1,7 +1,7 @@
 <h1>new</h1>
 <%= form_with model: @note, local: true do |f| %>
   <%= f.text_field :title %>
-  <%= f.text_field :content %>
+  <%= f.text_area :content %>
   <div class="field">
     <%= f.label :image_url %><br/>
     <%= f.file_field :image_url %>
