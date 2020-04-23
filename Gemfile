@@ -75,3 +75,4 @@ gem 'dotenv-rails'
 
 gem 'redcarpet'
 gem 'rouge'
+gem 'fog'
