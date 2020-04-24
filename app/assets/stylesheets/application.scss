@@ -89,7 +89,7 @@
     }
 
     .new-card {
-      width: 1000px;
+      width: 700px;
       margin: 0 auto;
       p {
         text-align: left;
@@ -97,5 +97,16 @@
       span {
         text-align: left;
       }
+      .icon-image {
+        padding: 10px;
+      }
+    }
+    .user_image {
+      img {
+        border-radius: 50%;
+        margin-top: 10px;
+        
+      }
+      list-style: none;
     }
   }   
