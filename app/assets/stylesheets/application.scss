@@ -15,9 +15,15 @@
  *= require_self
  */
   @import 'materialize';
+  $main: #454C50;
+  $sub: #6E777C;
+  $last: #D7E6EF;
+  $text: #677284;
+
+  $background: #F0F3F7;
 
   .nav-wrapper {
-    background-color: #FB9D7E;
+    background-color: $main;
     .brand-logo {
       margin-left: 100px;
     }
@@ -33,3 +39,27 @@
       margin-right: 10px;
     }
   }
+
+
+// ここからメインページ  
+  .top-image {
+    margin: 0 auto;
+    text-align: center;
+    h4 {
+      font-family: "ＭＳ Ｐゴシック",sans-serif;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 100px;
+    }
+    p {
+      font-weight: bold;
+      color: $text;
+    }
+    a {
+      margin-top: 20px;
+    }
+  }
+
+  .homepage {
+    background-color: $background;
+  }   
