@@ -13,10 +13,14 @@
   <div class="row">
     <h4>新しく投稿する</h4>
 
-    <% form_with model: @note, local: true do |f| %>
-      <div>
-        
+    <%= form_with model: @note, local: true do |f| %>
+      <div class="title-area">
+        <%= f.label :title, "タイトル" %><br/>
+        <%= f.text_field :title %>
       </div>
+
+
     <% end %>
+
   </div>
 </div>

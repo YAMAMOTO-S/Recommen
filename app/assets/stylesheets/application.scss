@@ -31,6 +31,13 @@
       margin-right: 100px;
     }
   }
+  .foot {
+    background-color: $sub;
+    height: 100px;
+    width: 100%;
+  }
+
+
 
   .head_user_image {
     img {
@@ -71,7 +78,7 @@
     text-align: center;
     .favorite-text {
       font-family: "ヒラギノ角ゴ StdN",sans-serif;
-      font-size: 20px;
+      font-size: 25px;
       padding-top: 40px;
     }
     .recommen_card {
@@ -84,7 +91,7 @@
     }
     .new-text {
       font-family: "ヒラギノ角ゴ StdN",sans-serif;
-      font-size: 20px;
+      font-size: 25px;
       padding-top: 100px;
     }
 
@@ -120,9 +127,19 @@
       font-size: 20px;
       padding-top: 40px;
     }
+
+    .title-area {
+      width: 50%;
+      height: 50px;
+      margin: 0 auto;
+
+      input[type=text]:focus + label {
+        color: $sub;
+      }
+      input[type=text]:focus {
+        border-bottom: 1px solid $sub;
+        box-shadow: 0 1px 0 0 $sub;
+      }
+    }
   }
-  .foot {
-    background-color: $sub;
-    height: 100px;
-    width: 100%;
-  }
+
