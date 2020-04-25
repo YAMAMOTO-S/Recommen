@@ -157,12 +157,15 @@
         color: #9E9E9E;
       }
     }
+    label {
+      font-size: 15px;
+    }
   }
 
   .content-back {
     margin-top: 50px;
     background-color: $background;
-    height: 700px;
+    height: 1050px;
     .content-field {
       text-align: center;
       margin: 0 auto;
@@ -170,11 +173,24 @@
       padding-top: 50px;
       textarea {
         height: 500px;
+        font-size: 20px;
+      }
+    }
+    label {
+      font-size: 15px;
+    }
+    .submit-btn {
+      text-align: center;
+      margin-top: 50px;
+      a {
+        background-color: $sub;
+        input {
+          font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+          color: $background;
+        }
       }
     }
   }
-
-
 
   #img_field {
     margin: 0 auto;

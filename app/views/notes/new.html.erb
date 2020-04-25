@@ -20,13 +20,20 @@
         </div>
         <%= f.file_field :image_url, class: "image", style: "display:none;", id: "file"%>
       </div>
+
   </div>
 </div>
+
 
 <div class="content-back">
   <div class="content-field">
     <%= f.label :content, "本文" %>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, placeholder: "Markdown 記法をご利用いただけます。&#13;&#10;オススメしたい物の良い所、悪い所、なんでも構いません。".html_safe %>
+  </div>
+
+  <div class="submit-btn">
+    <a href="/notes/new" 
+      class="waves-effect waves-light btn-large btn"><%= f.submit '投稿する', name: nil %></a>
   </div>
 </div>
 
