@@ -1,26 +1,21 @@
-<h1>new</h1>
-<%= form_with model: @note, local: true do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :content %>
-  <div class="field">
-    <%= f.label :image_url %><br/>
-    <%= f.file_field :image_url %>
-  </div>
-  <a class="waves-effect waves-light btn-large btn-flat" style="margin-top: 30px"><%= f.submit 'submit', name: nil %></a>
-<% end %>
 
 <div class="container new-page">
   <div class="row">
-    <h4>新しく投稿する</h4>
+    <p>新しく投稿する</p>
 
     <%= form_with model: @note, local: true do |f| %>
       <div class="title-area">
         <%= f.label :title, "タイトル" %><br/>
         <%= f.text_field :title %>
       </div>
-
-
-    <% end %>
-
   </div>
 </div>
+
+<div class="content-back">
+  <div class="content-field">
+    <%= f.label :content, "本文" %>
+    <%= f.text_area :content %>
+  </div>
+</div>
+
+<% end %>
