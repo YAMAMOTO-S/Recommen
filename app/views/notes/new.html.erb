@@ -8,6 +8,18 @@
         <%= f.label :title, "タイトル" %><br/>
         <%= f.text_field :title %>
       </div>
+
+      <div class="new-image">
+        <%= f.label :image_url, "カバー画像を登録" %><br/>
+        <div id="img_field" onClick="$('#file').click()" >
+          <% if @note.image_url.url.present? %>
+            <%= image_tag(@note.image_url.url) %>
+          <% else %>
+            <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
+          <% end %>
+        </div>
+        <%= f.file_field :image_url, class: "image", style: "display:none;", id: "file"%>
+      </div>
   </div>
 </div>
 

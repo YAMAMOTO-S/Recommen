@@ -150,7 +150,15 @@
         box-shadow: 0 1px 0 0 $sub;
       }
     }
+    .new-image {
+      margin-top: 50px;
+      input {
+        margin-top: 20px;
+        color: #9E9E9E;
+      }
+    }
   }
+
   .content-back {
     margin-top: 50px;
     background-color: $background;
@@ -166,3 +174,37 @@
     }
   }
 
+
+
+  #img_field {
+    margin: 0 auto;
+    padding-top: 20xp;
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 5px 8px;
+    border: solid 1px $sub;
+    color: #666;
+    position: relative;
+    padding: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 400px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: 0.3s ease-out;
+  }
+  #img_field:hover {
+    background-color: $background;
+    transition: 0.3s ease-out;
+    opacity: 0.9;
+  }
+  #img_field:hover i {
+    transition: 0.3s ease-out;
+    display: block;
+    color: #fff;
+  }
