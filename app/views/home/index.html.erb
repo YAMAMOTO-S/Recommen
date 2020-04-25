@@ -86,8 +86,10 @@
       <div class="new-card">
         <div class="card" style="display: flex">
           <div class="icon-image">
-            <% if current_user.image? %>
-              <li class="user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
+            <% if user_signed_in? %>
+              <% if current_user.image? %>
+                <li class="user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
+              <% end %>
             <% end %>
             <p><i class="samll material-icons">thumb_up</i></p>
           </div>
@@ -103,7 +105,11 @@
       <div class="new-card">
         <div class="card" style="display: flex">
           <div class="icon-image">
-            <li class="user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
+            <% if user_signed_in? %>
+              <% if current_user.image? %>
+                <li class="user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
+              <% end %>
+            <% end %>
             <p><i class="samll material-icons">thumb_up</i></p>
           </div>
           <div class="card-content">
@@ -118,7 +124,11 @@
       <div class="new-card">
         <div class="card" style="display: flex">
           <div class="icon-image">
-            <li class="user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
+            <% if user_signed_in? %>
+              <% if current_user.image? %>
+                <li class="user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
+              <% end %>
+            <% end %>
             <p><i class="samll material-icons">thumb_up</i></p>
           </div>
           <div class="card-content">
