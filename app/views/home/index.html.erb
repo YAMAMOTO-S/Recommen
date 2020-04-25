@@ -9,9 +9,10 @@
     <p>ジャンルは問いません、自分の好きな物をオススメしましょう。</p>
 
     <% if user_signed_in? %>
-      <a class="waves-effect waves-light btn-large">投稿する</a>
+      <a href="/notes/new" 
+        class="waves-effect waves-light btn-large btn">投稿する</a>
     <% else %>
-      <a class="waves-effect waves-light btn-large">はじめる</a>
+      <a class="waves-effect waves-light btn-large btn">はじめる</a>
     <% end %>
   </div>
 </div>
@@ -96,6 +97,40 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="new-card">
+        <div class="card" style="display: flex">
+          <div class="icon-image">
+            <li class="user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
+            <p><i class="samll material-icons">thumb_up</i></p>
+          </div>
+          <div class="card-content">
+            <span class="card-title">title</span>
+            <p class=''>description</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="new-card">
+        <div class="card" style="display: flex">
+          <div class="icon-image">
+            <li class="user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
+            <p><i class="samll material-icons">thumb_up</i></p>
+          </div>
+          <div class="card-content">
+            <span class="card-title">title</span>
+            <p class=''>description</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <br><br>
+  </div>
+
+  <div class="foot">
+    <h5></h5>
   </div>
 </div>
