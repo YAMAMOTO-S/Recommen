@@ -1,7 +1,7 @@
 <div class="container">
 
   <div style="display: flex" class="name_img">
-    <li class="user_image"><%= image_tag(current_user.image.url, size: "80") %></li>
+    <li class="user_image"><%= image_tag(@user.image.url, size: "80") %></li>
     <div class="name_btn">
       <p><%= @nickname %></p>
       <div class="folow_follower">
@@ -9,6 +9,9 @@
         <a href="#">フォロワー</a>
       </div>
     </div>
+  </div>
+  <div class="user_desc">
+    <p><%= markdown(@user.description).html_safe %></p>
   </div>
 
 </div>
