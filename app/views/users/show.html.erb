@@ -19,11 +19,19 @@
 <div class="user-back">
   <div class="user-notes">
     <p>作成したレコメン</p>
-    
-    <div class="user-card">
-      <p class="tit">たいとる</p>
-      <p class="disc">ほんぶんですこれは</p>
-    </div>
+    <% if @notes %>
+      <% @notes.each do |note| %>
+        <div class="user-card">
+          <a href="/notes/<%= note.id %>"><p class="tit"><%= note.title %></p></a>
+          <a href="/notes/<%= note.id %>"><p class="disc"><%= note.content.truncate(40)  %></p></a>
+        </div><br>
+      <% end %>
+      <% else %>
+        <div class="user-card">
+          <p class="tit">まだ投稿されていません。</p>
+          <p class="disc"></p>
+        </div>
+    <% end %>
 
     <p>いいねしたレコメン</p>
 
