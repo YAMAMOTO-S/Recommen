@@ -1,12 +1,26 @@
-<div>
-    <% @notes.each do |note| %>
-      <div>
-        <p><%= note.title %></p>
-        <% if note.image_url? %>
-          <%= image_tag(note.image_url.url, size: "200") %>
-          <%= markdown(note.content) %>
-        <% end %>  
+<div class="container">
+
+  <div style="display: flex" class="name_img">
+    <li class="user_image"><%= image_tag(current_user.image.url, size: "80") %></li>
+    <div class="name_btn">
+      <p><%= @nickname %></p>
+      <div class="folow_follower">
+        <a href="#">フォロー</a>
+        <a href="#">フォロワー</a>
       </div>
-    <% end %>
+    </div>
+  </div>
+
+</div>
+
+<div class="user-back">
+  <div class="user-notes">
+    <p>作成したレコメン</p>
     
+    <div class="user-card">
+      <p class="tit">たいとる</p>
+      <p class="disc">ほんぶんですこれは</p>
+    </div>
+
+  </div>
 </div>

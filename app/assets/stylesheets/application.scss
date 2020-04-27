@@ -63,7 +63,8 @@
     margin: 0 auto;
     text-align: center;
     h4 {
-      font-family: "ヒラギノ角ゴ StdN",sans-serif;
+      font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+      font-weight: bold;
       text-align: center;
       margin-top: 100px;
     }
@@ -86,7 +87,8 @@
     margin: 0 auto;
     text-align: center;
     .favorite-text {
-      font-family: "ヒラギノ角ゴ StdN",sans-serif;
+      font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+      font-weight: bold;
       font-size: 25px;
       padding-top: 40px;
     }
@@ -99,7 +101,8 @@
       }
     }
     .new-text {
-      font-family: "ヒラギノ角ゴ StdN",sans-serif;
+      font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+      font-weight: bold;
       font-size: 25px;
       padding-top: 100px;
     }
@@ -132,7 +135,8 @@
   .new-page {
     text-align: center;
     p {
-      font-family: "ヒラギノ角ゴ StdN",sans-serif;
+      font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+      font-weight: bold;
       font-size: 25px;
       padding-top: 40px;
     }
@@ -229,3 +233,62 @@
     display: block;
     color: #fff;
   }
+
+
+// 個人ページ
+.user_image {
+  img {
+    border-radius: 50%;
+  }
+  list-style: none;
+}
+.name_img {
+  margin-left: 200px;
+  margin-top: 40px;
+  .name_btn {
+    p {
+      font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+      font-weight: bold;
+      margin-left: 30px;
+      font-size: 25px;
+      margin-top: 5px;
+    }
+    .folow_follower  {
+      margin-top: -20px;
+      margin-left: 30px;
+    }
+  }
+}
+
+.user-back {
+  max-width: 100%;
+  height: 800px;
+  background-color: $background;
+  .user-notes {
+    max-width: 50%;
+    margin-left: 450px;
+    p {
+      font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+      font-weight: bold;
+      font-size: 25px;
+      padding-top: 40px;
+    }
+
+    .user-card {
+      border: 1px solid $main;
+      width: 600px;
+      p {
+        font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+        font-size: 20px;
+      }
+      .tit {
+        margin-top: -40px;
+      }
+      .disc {
+        margin-top: -50px;
+        font-size: 14px;
+        color: $text;
+      }
+    }
+  }
+}
