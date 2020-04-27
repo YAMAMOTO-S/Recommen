@@ -243,7 +243,7 @@
   list-style: none;
 }
 .name_img {
-  margin-left: 200px;
+  margin-left: 300px;
   margin-top: 40px;
   .name_btn {
     p {
@@ -260,9 +260,10 @@
   }
 }
 .user_desc {
-  margin-left: 310px;
+  margin-left: 410px;
   color: $text;
   font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+  margin-top: -20px;
 }
 
 .user-back {
@@ -271,7 +272,7 @@
   background-color: $background;
   .user-notes {
     max-width: 50%;
-    margin-left: 450px;
+    margin-left: 550px;
     p {
       font-family: "Hiragino Sans", "Meiryo", "sans-serif";
       font-weight: bold;
