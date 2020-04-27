@@ -1,12 +1,44 @@
-<div>
-    <% @notes.each do |note| %>
-      <div>
-        <p><%= note.title %></p>
-        <% if note.image_url? %>
-          <%= image_tag(note.image_url.url, size: "200") %>
-          <%= markdown(note.content) %>
-        <% end %>  
+<div class="container">
+
+  <div style="display: flex" class="name_img">
+    <li class="user_image"><%= image_tag(@user.image.url, size: "80") %></li>
+    <div class="name_btn">
+      <p><%= @nickname %></p>
+      <div class="folow_follower">
+        <a href="#">フォロー</a>
+        <a href="#">フォロワー</a>
       </div>
+    </div>
+  </div>
+  <div class="user_desc">
+    <p><%= markdown(@user.description).html_safe %></p>
+  </div>
+
+</div>
+
+<div class="user-back">
+  <div class="user-notes">
+    <p>作成したレコメン</p>
+    <% if @notes %>
+      <% @notes.each do |note| %>
+        <div class="user-card">
+          <a href="/notes/<%= note.id %>"><p class="tit"><%= note.title %></p></a>
+          <a href="/notes/<%= note.id %>"><p class="disc"><%= note.content.truncate(40)  %></p></a>
+        </div><br>
+      <% end %>
+      <% else %>
+        <div class="user-card">
+          <p class="tit">まだ投稿されていません。</p>
+          <p class="disc"></p>
+        </div>
     <% end %>
-    
+
+    <p>いいねしたレコメン</p>
+
+    <div class="user-card">
+      <p class="tit">たいとる</p>
+      <p class="disc">ほんぶんですこれは</p>
+    </div>
+
+  </div>
 </div>

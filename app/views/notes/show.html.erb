@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="show_title">
+    <p><%= @note.title %></p>
+    <div class="show_image">
+      <%= image_tag(@note.image_url.url, size: "300") %>
+    </div>
+  </div>
+</div>
+
+<div class="note_back">
+  <div class="container">
+    <div class="show_content">
+      <p><%= markdown(@note.content).html_safe %></p>
+      
+      <div class="show_user" style="display: flex">
+        <li class="show_user_image"><%= image_tag(@note.user.image.url, size: "60") %></li>
+        <div class="show_user_name">
+          <p><%= @note.user.nickname %></p>
+          <p><%= markdown(@note.user.description).html_safe %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
