@@ -329,10 +329,15 @@
     width: 60%;
     margin: 0 auto;
     padding-top: 30px;
+    p {
+      font-size: 17px;
+      line-height: 30px;
+    }
 
     .show_user {
       margin-top: 10px;
-      border: 2px solid $last;
+      border-top: 2px solid $last;
+      border-bottom: 2px solid $last;
       padding-left: 10px;
       .show_user_image {
         img {
@@ -343,7 +348,17 @@
         list-style: none;
       }
       .show_user_name {
-        
+        margin-left: 10px;
+        .user_namename {
+          font-weight: bold;
+          font-size: 20px;
+          margin-bottom: -5px;
+        }
+        p {
+          font-size: 13px;
+          color: $text;
+          line-height: 20px;
+        }
       }
     }
   }
