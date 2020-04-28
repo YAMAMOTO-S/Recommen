@@ -17,7 +17,12 @@
         <div class="note_fav">
           <i class="material-icons">thumb_up</i>
         </div>
-        <div class="note_delete">
+        <div class="note_delete" style="display: flex">
+        <% if current_user.id == @note.user_id %>
+          <%= link_to "/notes/#{@note.id}/edit" do %>
+            <p class="waves-effect waves-light btn-small"><i class="material-icons left">brush</i>編集する</p>
+          <% end %>
+        <% end %>
         <% if current_user.id == @note.user_id %>
           <%= link_to "/notes/#{@note.id}", method: :delete, data: {confirm: '削除しますか？'} do %>
             <p class="waves-effect waves-light btn-small"><i class="material-icons left">delete</i>削除する</p>
