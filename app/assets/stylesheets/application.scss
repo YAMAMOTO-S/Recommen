@@ -301,7 +301,6 @@
 }
 
 // ここから詳細ページ
-
 .show_title {
   text-align: center;
   p {
@@ -325,7 +324,7 @@
   width: 100%;
   height: 100%;
   margin-top: 60px;
-  padding-bottom: 500px;
+  padding-bottom: 200px;
   .show_content {
     width: 60%;
     margin: 0 auto;
@@ -346,6 +345,68 @@
       .show_user_name {
         
       }
+    }
+  }
+}
+
+
+// ユーザー新規登録ページ
+.sign_name {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  p {
+    font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 40px;
+  }
+  input[type=text]:focus + label {
+    color: $sub;
+  }
+  input[type=text]:focus {
+    border-bottom: 1px solid $sub;
+    box-shadow: 0 1px 0 0 $sub;
+  }
+
+}
+.user_samune {
+  width: 500px;
+  margin-left: 340px;
+  margin-top: 20px;
+  label {
+    font-size: 20px;
+    text-align: left;
+  }
+}
+
+.user_email {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+  input[type=text]:focus + label {
+    color: $sub;
+  }
+  input[type=text]:focus {
+    border-bottom: 1px solid $sub;
+    box-shadow: 0 1px 0 0 $sub;
+  }
+}
+
+.user_descirption {
+  padding-top: 20px;
+  width: 500px;
+  margin: 0 auto;
+}
+.submit-btn {
+  text-align: center;
+  margin-top: 30px;
+  a {
+    background-color: $sub;
+    input {
+      font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+      color: $background;
+      font-weight: bold;
     }
   }
 }
