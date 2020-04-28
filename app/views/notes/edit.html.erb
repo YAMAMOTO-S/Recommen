@@ -1,0 +1,39 @@
+
+<div class="container new-page">
+  <div class="row">
+    <p>レコメンを編集</p>
+
+    <%= form_with model: @note, local: true do |f| %>
+      <div class="title-area">
+        <%= f.label :title, "タイトル" %><br/>
+        <%= f.text_field :title %>
+      </div>
+
+      <div class="new-image">
+        <%= f.label :image_url, "カバー画像を登録" %><br/>
+        <div id="img_field" onClick="$('#file').click()" >
+          <% if @note.image_url.url.present? %>
+            <%= image_tag(@note.image_url.url) %>
+          <% else %>
+            <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
+          <% end %>
+        </div>
+        <%= f.file_field :image_url, class: "image", style: "display:none;", id: "file"%>
+      </div>
+
+  </div>
+</div>
+
+
+<div class="content-back">
+  <div class="content-field">
+    <%= f.label :content, "本文" %>
+    <%= f.text_area :content, placeholder: "Markdown 記法をご利用いただけます。&#13;&#10;オススメしたい物の良い所、悪い所、なんでも構いません。".html_safe %>
+  </div>
+
+  <div class="submit-btn">
+    <a class="waves-effect waves-light btn-large btn-flat" style="margin-top: 30px"><%= f.submit '投稿する', name: nil %></a>
+  </div>
+</div>
+
+<% end %>

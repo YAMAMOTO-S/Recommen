@@ -20,6 +20,21 @@ class NotesController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    note = Note.find(params[:id])
+    note.destroy
+    redirect_to root_path
+  end
+
+  def edit
+    @note = Note.find(params[:id])
+  end
+  def update
+    note = Note.find(params[:id])
+    note.update(note_params)
+    redirect_to note_path(note.id)
+  end
   
 
   private
