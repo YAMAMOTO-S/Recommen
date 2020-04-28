@@ -35,7 +35,9 @@
         <a href="/users/<%= @note.user.id %>"><li class="show_user_image"><%= image_tag(@note.user.image.url, size: "60") %></li></a>
         <div class="show_user_name">
           <a href="/users/<%= @note.user.id %>"><p class="user_namename"><%= @note.user.nickname %></p></a>
-          <p><%= markdown(@note.user.description).html_safe %></p>
+          <% if @note.user.description? %>
+            <p><%= markdown(@note.user.description).html_safe %></p>
+          <% end %>
         </div>
       </div>
 

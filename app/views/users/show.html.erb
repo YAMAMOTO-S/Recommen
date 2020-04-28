@@ -11,7 +11,9 @@
     </div>
   </div>
   <div class="user_desc">
-    <p><%= markdown(@user.description).html_safe %></p>
+    <% if @user.description? %>
+      <p><%= markdown(@user.description).html_safe %></p>
+    <% end %>
   </div>
 
 </div>

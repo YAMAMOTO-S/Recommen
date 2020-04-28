@@ -1,4 +1,5 @@
 class NotesController < ApplicationController
+  before_action :move_to_index, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @notes = Note.all
@@ -43,6 +44,6 @@ class NotesController < ApplicationController
   end
   
   def move_to_index
-    redirect_to action: :index unless user_signed_in?
+    redirect_to controller: :home, action: :index unless user_signed_in?
   end
 end
