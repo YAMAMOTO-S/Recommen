@@ -330,7 +330,7 @@
     margin: 0 auto;
     padding-top: 30px;
     p {
-      font-size: 17px;
+      font-size: 16px;
       line-height: 30px;
     }
 
@@ -376,6 +376,8 @@
     p {
       background-color: $sub;
       font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+      font-size: 13px;
+      padding-top: 1px;
     }
   }
 }
