@@ -1,0 +1,22 @@
+<div class="container">
+<%= form_for(current_user) do |f| %>
+  <div class="sign_name">
+    <p>登録情報の変更</p>
+    <%= f.text_field :nickname, maxlength: "8", placeholder: "ニックネーム" %>
+  </div>
+  <div class="user_samune">
+      <%= f.label :image, "サムネイル"%><br/>
+      <%= f.file_field :image %>
+  </div>
+  <div class="user_email">
+    <%= f.email_field :email, placeholder: "メールアドレス" %>
+  </div>
+  <div class="user_descirption">
+    <%= f.text_area :description, placeholder: "自己紹介" %>
+  </div>
+  <div class="submit-btn">
+    <a class="waves-effect waves-light btn-large btn-flat" style="margin-top: 30px"><%= f.submit "Sign up" %></a>
+  </div>
+<% end %>  
+</div>
+
