@@ -12,6 +12,20 @@
     <div class="show_content">
       <p><%= markdown(@note.content).html_safe %></p>
       
+
+      <div class="delete_fav">
+        <div class="note_fav">
+          <i class="material-icons">thumb_up</i>
+        </div>
+        <div class="note_delete">
+        <% if current_user.id == @note.user_id %>
+          <%= link_to "/notes/#{@note.id}", method: :delete, data: {confirm: '削除しますか？'} do %>
+            <p class="waves-effect waves-light btn-small"><i class="material-icons left">delete</i>削除する</p>
+          <% end %>
+        <% end %>
+        </div>
+      </div>
+
       <div class="show_user" style="display: flex">
         <li class="show_user_image"><%= image_tag(@note.user.image.url, size: "60") %></li>
         <div class="show_user_name">
@@ -19,6 +33,7 @@
           <p><%= markdown(@note.user.description).html_safe %></p>
         </div>
       </div>
+
     </div>
   </div>
 </div>

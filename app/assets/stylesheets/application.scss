@@ -331,7 +331,7 @@
     padding-top: 30px;
 
     .show_user {
-      margin-top: 200px;
+      margin-top: 10px;
       border: 2px solid $last;
       padding-left: 10px;
       .show_user_image {
@@ -345,6 +345,22 @@
       .show_user_name {
         
       }
+    }
+  }
+}
+.delete_fav {
+  margin-top: 100px;
+  margin-bottom: -10px;
+  display: flex;
+  .note_fav {
+    line-height: 58px;
+    padding-top: 5px;
+  }
+  .note_delete {
+    margin-left: 30px;
+    p {
+      background-color: $sub;
+      font-family: "Hiragino Sans", "Meiryo", "sans-serif";
     }
   }
 }
