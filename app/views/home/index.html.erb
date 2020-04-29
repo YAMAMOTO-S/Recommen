@@ -82,62 +82,24 @@
 <%# 新着順 %>
     <p class="new-text">新しい投稿</p>
 
-    <div class="row">
-      <div class="new-card">
-        <div class="card" style="display: flex">
-          <div class="icon-image">
-            <% if user_signed_in? %>
-              <% if current_user.image? %>
-                <li class="user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
-              <% end %>
-            <% end %>
-            <p><i class="samll material-icons">thumb_up</i></p>
-          </div>
-          <div class="card-content">
-            <span class="card-title">title</span>
-            <p class=''>description</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="new-card">
-        <div class="card" style="display: flex">
-          <div class="icon-image">
-            <% if user_signed_in? %>
-              <% if current_user.image? %>
-                <li class="user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
-              <% end %>
-            <% end %>
-            <p><i class="samll material-icons">thumb_up</i></p>
-          </div>
-          <div class="card-content">
-            <span class="card-title">title</span>
-            <p class=''>description</p>
+    <% @notes.first(4).each do |note| %>
+      <div class="row">
+        <div class="new-card">
+          <div class="card" style="display: flex">
+            <div class="icon-image">
+                <li class="user_image"><%= image_tag(note.user.image.url, size: "40") %></li>
+              <p><i class="samll material-icons">thumb_up</i><%= note.favorites.count %></p>
+            </div>
+            <div class="card-content">
+              <a href="/notes/<%= note.id %>"><span class="card-title"><%= note.title %></span></a>
+              <a href="/notes/<%= note.id %>">
+                <p class=''><%= note.content.truncate(40)  %></p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="new-card">
-        <div class="card" style="display: flex">
-          <div class="icon-image">
-            <% if user_signed_in? %>
-              <% if current_user.image? %>
-                <li class="user_image"><%= image_tag(current_user.image.url, size: "40") %></li>
-              <% end %>
-            <% end %>
-            <p><i class="samll material-icons">thumb_up</i></p>
-          </div>
-          <div class="card-content">
-            <span class="card-title">title</span>
-            <p class=''>description</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <% end %>   
 
   <br><br>
   </div>

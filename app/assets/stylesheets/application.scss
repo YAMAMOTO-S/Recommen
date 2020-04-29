@@ -117,7 +117,25 @@
         text-align: left;
       }
       .icon-image {
-        padding: 10px;
+        padding-left: 13px;
+        padding-top: 7px;
+        p {
+          margin-left: 5px;
+          padding-bottom: -5px;
+          justify-content: space-between;
+          i {
+            color: $sub;
+            margin-top: -5px;
+          }
+        }
+      }
+      .card-content {
+        .card-title {
+          color: $main;
+        }
+        a {
+          color: $text;
+        }
       }
     }
     .user_image {
@@ -341,7 +359,7 @@
     }
 
     .show_user {
-      margin-top: 10px;
+      margin-top: 4px;
       border-top: 2px solid $last;
       border-bottom: 2px solid $last;
       padding-left: 10px;
@@ -375,8 +393,30 @@
   display: flex;
   justify-content: space-between;
   .note_fav {
-    line-height: 58px;
-    padding-top: 5px;
+    .fav-icons {
+      display: flex;
+      i {
+        line-height: 58px;
+        padding-top: 5px;
+        color: $sub;
+      }
+      p {
+        margin-left: 10px;
+        padding-top: 5px;
+      }
+    }
+    .not-fav {
+      display: flex;
+      i {
+        line-height: 58px;
+        padding-top: 5px;
+        color: $sub;
+      }
+      p {
+        margin-left: 10px;
+        padding-top: 5px;
+      }
+    }
   }
   .note_delete {
     margin-left: 30px;

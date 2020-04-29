@@ -14,18 +14,22 @@
       
 
       <div class="delete_fav">
-        <div class="note_fav">
-          <i class="material-icons">thumb_up</i>
+
+        <div class="note_fav" id="like-link-<%= @note.id %>">
+            <%= render partial: 'favorites/favorite', locals: {note: @note} %>
         </div>
+
         <div class="note_delete" style="display: flex">
-        <% if current_user.id == @note.user_id %>
-          <%= link_to "/notes/#{@note.id}/edit" do %>
-            <p class="waves-effect waves-light btn-small"><i class="material-icons left">brush</i>編集する</p>
+        <% if user_signed_in? %>
+          <% if current_user.id == @note.user_id %>
+            <%= link_to "/notes/#{@note.id}/edit" do %>
+              <p class="waves-effect waves-light btn-small"><i class="material-icons left">brush</i>編集する</p>
+            <% end %>
           <% end %>
-        <% end %>
-        <% if current_user.id == @note.user_id %>
-          <%= link_to "/notes/#{@note.id}", method: :delete, data: {confirm: '削除しますか？'} do %>
-            <p class="waves-effect waves-light btn-small"><i class="material-icons left">delete</i>削除する</p>
+          <% if current_user.id == @note.user_id %>
+            <%= link_to "/notes/#{@note.id}", method: :delete, data: {confirm: '削除しますか？'} do %>
+              <p class="waves-effect waves-light btn-small"><i class="material-icons left">delete</i>削除する</p>
+            <% end %>
           <% end %>
         <% end %>
         </div>
