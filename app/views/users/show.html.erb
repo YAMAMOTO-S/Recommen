@@ -5,7 +5,7 @@
       <li class="user_image"><%= image_tag(@user.image.url, size: "80") %></li>
       <% if current_user.id == @user.id %>
         <%= link_to "/users/#{current_user.id}/edit" do %>
-          <p class="waves-effect waves-light btn-small">変更</p>
+          <p class="waves-light btn-small flat">変更</p>
         <% end %>
       <% end %>
     </div>

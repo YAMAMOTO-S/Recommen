@@ -44,3 +44,13 @@
     </div>
   </div>
 </div>
+
+<% if user_signed_in? %>
+  <% if @note.favorited_by?(current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
+      <p><span>お気に入り解除: </span><%=link_to @note.favorites.count, note_favorites_path(@note.id), method: :delete %></p>
+  <% else %>
+      <p><span>お気に入り登録: </span><%=link_to @note.favorites.count, note_favorites_path(@note.id), method: :post %></p>
+  <% end %>
+<% else %>
+  <p><span>お気に入り数: </span><%= @note.favorites.count %></p>
+<% end %>

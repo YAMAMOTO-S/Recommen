@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root "home#index"
 
-  resources :notes
+  resources :notes do
+    resource :favorites, only: [:create, :destroy]
+  end
+
   resources :users, only: [:show, :edit, :update]
 end
