@@ -1,6 +1,9 @@
 class Note < ApplicationRecord
+  validates :title, presence: true
+  validates :image_url, presence: true
+  validates :content, presence: true
+
   belongs_to :user
-  has_many :favorites
   mount_uploader :image_url, ImageUploader
 
   def favorited_by?(user)
