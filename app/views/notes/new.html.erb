@@ -28,12 +28,18 @@
 <div class="content-back">
   <div class="content-field">
     <%= f.label :content, "本文" %>
-    <%= f.text_area :content, placeholder: "Markdown 記法をご利用いただけます。&#13;&#10;オススメしたい物の良い所、悪い所、なんでも構いません。".html_safe, :id => 'markdown_editor' %>
+    <%= f.text_area :content, 
+    placeholder: "Markdown 記法をご利用いただけます。&#13;&#10;オススメしたい物の良い所、悪い所、なんでも構いません。&#13;&#10
+    Markdown記入例: &#13;&#10
+    ###見出し&#13;&#10
+    >引用文&#13;&#10
+    *強調*&#13;&#10".html_safe, :id => 'markdown_editor' %>
   </div>
+  <div id='markdown_preview' style="white-space: pre;"></div>
 
   <div class="submit-btn">
     <a class="waves-effect waves-light btn-large btn-flat" style="margin-top: 30px"><%= f.submit '投稿する', name: nil %></a>
   </div>
 </div>
-<div id='markdown_preview' style="white-space: pre;"></div>
+
 <% end %>
