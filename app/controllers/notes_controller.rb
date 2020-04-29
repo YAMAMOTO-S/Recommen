@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_action :move_to_index, only: [:new, :edit, :destroy, :update]
+  before_action :move_to_index, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @notes = Note.all

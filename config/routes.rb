@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root "home#index"
 
   resources :notes
-  resources :users, only: :show
+  resources :users, only: [:show, :edit, :update]
 end
