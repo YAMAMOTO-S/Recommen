@@ -76,3 +76,6 @@ gem 'dotenv-rails'
 gem 'redcarpet'
 gem 'rouge'
 gem 'fog'
+
+gem 'jquery-ui-rails', '~> 6.0.1'
+gem 'marked-rails', '~> 0.3.2.0'
