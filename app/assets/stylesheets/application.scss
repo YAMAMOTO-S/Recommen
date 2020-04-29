@@ -117,7 +117,25 @@
         text-align: left;
       }
       .icon-image {
-        padding: 10px;
+        padding-left: 13px;
+        padding-top: 7px;
+        p {
+          margin-left: 5px;
+          padding-bottom: -5px;
+          justify-content: space-between;
+          i {
+            color: $sub;
+            margin-top: -5px;
+          }
+        }
+      }
+      .card-content {
+        .card-title {
+          color: $main;
+        }
+        a {
+          color: $text;
+        }
       }
     }
     .user_image {

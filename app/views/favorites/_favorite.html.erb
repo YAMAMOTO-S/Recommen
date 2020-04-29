@@ -1,24 +1,24 @@
 <% if user_signed_in? %>
-            <% if note.favorited_by?(current_user) %>
-            <div class="fav-icons">
-              <%= link_to note_favorites_path(note.id), method: :delete, remote: true  do %>
-                <i class="samll material-icons">thumb_up</i>
-              <% end %>
-                <p><%= note.favorites.count %></p>
-            </div>
+  <% if note.favorited_by?(current_user) %>
+  <div class="fav-icons">
+    <%= link_to note_favorites_path(note.id), method: :delete, remote: true  do %>
+      <i class="samll material-icons">thumb_up</i>
+    <% end %>
+      <p><%= note.favorites.count %></p>
+  </div>
 
-            <% else %>
+  <% else %>
 
-            <div class="not-fav">
-            <%=link_to note_favorites_path(note.id), method: :post, remote: true  do %>
-              <i class="samll material-icons">thumb_up</i>
-            <% end %>
-              <p><%= note.favorites.count %></p>
-            </div>
-            <% end %>
-            <% else %>
-            <div class="not-fav">
-              <i class="samll material-icons">thumb_up</i>
-              <p><%= note.favorites.count %></p>
-            </div>
-            <% end %>
+  <div class="not-fav">
+  <%=link_to note_favorites_path(note.id), method: :post, remote: true  do %>
+    <i class="samll material-icons">thumb_up</i>
+  <% end %>
+    <p><%= note.favorites.count %></p>
+  </div>
+  <% end %>
+  <% else %>
+    <div class="not-fav">
+      <i class="samll material-icons">thumb_up</i>
+      <p><%= note.favorites.count %></p>
+    </div>
+  <% end %>
