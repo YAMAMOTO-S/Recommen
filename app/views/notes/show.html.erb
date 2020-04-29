@@ -14,9 +14,11 @@
       
 
       <div class="delete_fav">
-        <div class="note_fav">
-          <i class="material-icons">thumb_up</i>
+
+        <div class="center-align" id="like-link-<%= @note.id %>">
+            <%= render partial: 'favorites/favorite', locals: {note: @note} %>
         </div>
+
         <div class="note_delete" style="display: flex">
         <% if current_user.id == @note.user_id %>
           <%= link_to "/notes/#{@note.id}/edit" do %>
@@ -46,11 +48,12 @@
 </div>
 
 <% if user_signed_in? %>
-  <% if @note.favorited_by?(current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
-      <p><span>お気に入り解除: </span><%=link_to @note.favorites.count, note_favorites_path(@note.id), method: :delete %></p>
-  <% else %>
-      <p><span>お気に入り登録: </span><%=link_to @note.favorites.count, note_favorites_path(@note.id), method: :post %></p>
-  <% end %>
-<% else %>
-  <p><span>お気に入り数: </span><%= @note.favorites.count %></p>
-<% end %>
+            <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
+            <% if @note.favorited_by?(current_user) %>
+                <p><i class="material-icons">thumb_up</i><%=link_to @note.favorites.count, note_favorites_path(@note.id), method: :delete %></p>
+            <% else %>
+                <p><i class="material-icons">thumb_up</i><%=link_to @note.favorites.count, note_favorites_path(@note.id), method: :post %></p>
+            <% end %>
+          <% else %>
+            <p><i class="material-icons">thumb_up</i><%= @note.favorites.count %></p>
+          <% end %>
