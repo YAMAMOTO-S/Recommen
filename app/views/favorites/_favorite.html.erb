@@ -17,5 +17,8 @@
             </div>
             <% end %>
             <% else %>
-            <p><span>Number of favorites: </span><%= note.favorites.count %></p>
+            <div class="not-fav">
+              <i class="samll material-icons">thumb_up</i>
+              <p><%= note.favorites.count %></p>
+            </div>
             <% end %>
