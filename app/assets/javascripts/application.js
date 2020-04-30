@@ -12,10 +12,11 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require_tree .
 //= require materialize
 //= require jquery
 //= require jquery_ujs
+//= require jquery
+//= require marked
 
 $(function(){
   $fileField = $('#file')
@@ -40,3 +41,9 @@ $(function(){
     reader.readAsDataURL(file);
   });
 });
+
+$(() => {
+  $('body').keyup(() => {
+    $('#markdown_preview').html(marked($('#markdown_editor').val()))
+  })
+})
