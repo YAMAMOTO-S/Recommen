@@ -1,4 +1,28 @@
-<h1>notes index</h1>
+
 <% @notes.each do |note| %>
-<%= note.title  %>
+  <%= note.tag_list %>
+  <%= note.title %>
 <% end %>
+
+    <% @notes.each do |note| %>
+
+      <div class="row">
+        <div class="new-card">
+          <div class="card" style="display: flex">
+            <div class="icon-image">
+                <li class="user_image"><%= image_tag(note.user.image.url, size: "40") %></li>
+              <p><i class="samll material-icons">thumb_up</i><%= note.favorites.count %></p>
+            </div>
+            <div class="card-content">
+              <a href="/notes/<%= note.id %>"><span class="card-title"><%= note.title %></span></a>
+              <a href="/notes/<%= note.id %>">
+                <p class=''><%= note.content.truncate(40)  %></p>
+              </a>
+              <% note.tag_list.each do |tag| %>
+                <%= link_to tag, notes_path(tag_name: tag) %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>   
