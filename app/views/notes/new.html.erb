@@ -7,8 +7,11 @@
       <div class="title-area">
         <%= f.label :title, "タイトル" %><br/>
         <%= f.text_field :title %>
+        <div class="tag">
+          <%= f.label :tag_list, "タグ" %>
+          <%= f.text_field :tag_list, value: @note.tag_list.join(","), class: "form-control", placeholder: 'タグ(複数登録の場合は,で区切ってください。)' %>
+        </div>
       </div>
-
       <div class="new-image">
         <%= f.label :image_url, "カバー画像を登録" %><br/>
         <div id="img_field" onClick="$('#file').click()" >
@@ -19,9 +22,6 @@
           <% end %>
         </div>
         <%= f.file_field :image_url, class: "image", style: "display:none;", id: "file"%>
-      </div>
-      <div class="tag">
-        <%= f.text_field :tag_list, value: @note.tag_list.join(","), class: "form-control", placeholder: 'タグ(複数登録の場合は,で区切ってください。)' %>
       </div>
 
   </div>
