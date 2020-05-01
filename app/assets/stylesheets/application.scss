@@ -33,8 +33,6 @@
   }
   .foot {
     background-color: $sub;
-    height: 100px;
-    width: 100%;
   }
   .btn:hover {
     background-color: $sub
@@ -136,6 +134,23 @@
         a {
           color: $text;
         }
+        .catego {
+          display: flex;
+          .category_btn {
+            border: 1px solid $sub;
+            text-align: left;
+            width: 50px;
+            margin-top: 30px;
+            margin-right: 5px;
+            background-color: $sub;
+            border-radius: 5px;
+            display: flex;
+            a {
+              padding-left: 3px;
+              color: white;
+            }
+          }
+        }
       }
     }
     .user_image {
@@ -171,9 +186,12 @@
         border-bottom: 1px solid $sub;
         box-shadow: 0 1px 0 0 $sub;
       }
+      input {
+        margin-bottom: 40px;
+      }
     }
     .new-image {
-      margin-top: 50px;
+      margin-top: 200px;
       input {
         margin-top: 20px;
         color: #9E9E9E;
@@ -291,6 +309,7 @@
 }
 
 .user-back {
+  margin-top: 40px;
   max-width: 100%;
   height: 800px;
   background-color: $background;
@@ -305,8 +324,10 @@
     }
 
     .user-card {
-      border: 1px solid $last;
+      border-top: 2px solid $last;
+      border-bottom: 2px solid $last;
       width: 600px;
+      padding: 5px 0;
       p {
         font-family: "ヒラギノ丸ゴ ProN",sans-serif;
         font-size: 20px;
@@ -322,6 +343,11 @@
       }
     }
   }
+}
+.user_foot {
+  background-color: $background;
+  width: 100%;
+  height: 100px;
 }
 
 .preview {
@@ -524,4 +550,67 @@
       font-weight: bold;
     }
   }
+}
+
+
+
+// カテゴリー毎の一覧view
+.category_view {
+  margin: 0 auto;
+  width: 700px;
+  .new-text {
+    text-align: center;
+    font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+    font-weight: bold;
+    font-size: 25px;
+    padding: 30px 0;
+  }
+  .show_image {
+    margin-bottom: -10px;
+    img {
+      width: 700px;
+    }
+  }
+  .new-card {
+    margin-bottom: 40px;
+    .icon-image {
+      padding: 10px 0 0 10px;
+      i {
+        color: $sub;
+      }
+    }
+  }
+  .card-content {
+    .card-title {
+      color: $main;
+    }
+    a {
+      color: $text;
+    }
+    .catego {
+      display: flex;
+      .category_btn {
+        border: 1px solid $sub;
+        text-align: left;
+        width: 50px;
+        margin-top: 30px;
+        margin-right: 5px;
+        background-color: $sub;
+        border-radius: 5px;
+        display: flex;
+        a {
+          padding-left: 3px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// 編集ページ
+.tag2 {
+  width: 420px;
+  margin: 0 auto;
+  margin-bottom: -150px;
+  margin-top: 50px;
 }
