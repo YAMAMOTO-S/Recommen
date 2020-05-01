@@ -1,4 +1,5 @@
 class Note < ApplicationRecord
+  acts_as_taggable
   validates :title, presence: true
   validates :image_url, presence: true
   validates :content, presence: true
