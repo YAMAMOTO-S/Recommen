@@ -44,10 +44,20 @@
 
     <p>いいねしたレコメン</p>
 
-    <div class="user-card">
-      <p class="tit">たいとる</p>
-      <p class="disc">ほんぶんですこれは</p>
-    </div>
-
+      <% if @favorite_notes %>
+      <% @favorite_notes.each do |fav_note| %>
+        <div class="user-card">
+          <a href="/notes/<%= fav_note.id %>"><p class="tit"><%= fav_note.title %></p></a>
+          <a href="/notes/<%= fav_note.id %>"><p class="disc"><%= fav_note.content.truncate(40)  %></p></a>
+        </div><br>
+      <% end %>
+      <% else %>
+        <div class="user-card">
+          <p class="tit">いいねしたレコメンはありません。</p>
+          <p class="disc"></p>
+        </div>
+    <% end %>
   </div>
 </div>
+
+<div class="user_foot"></div>
