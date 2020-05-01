@@ -525,3 +525,40 @@
     }
   }
 }
+
+// カテゴリー毎の一覧view
+
+.category_view {
+  margin: 0 auto;
+  width: 700px;
+  .new-text {
+    text-align: center;
+    font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+    font-weight: bold;
+    font-size: 25px;
+    padding: 30px 0;
+  }
+  .show_image {
+    margin-bottom: -10px;
+    img {
+      width: 700px;
+    }
+  }
+  .new-card {
+    margin-bottom: 40px;
+    .icon-image {
+      padding: 10px 0 0 10px;
+      i {
+        color: $sub;
+      }
+    }
+  }
+  .card-content {
+    .card-title {
+      color: $main;
+    }
+    a {
+      color: $text;
+    }
+  }
+}
