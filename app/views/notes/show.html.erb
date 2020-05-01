@@ -10,6 +10,13 @@
 <div class="note_back">
   <div class="container">
     <div class="show_content">
+      <div class="catego">
+        <% @note.tag_list.each do |tag| %>
+        <div class="category_btn">
+          <%= link_to tag, notes_path(tag_name: tag) %>
+        </div>
+        <% end %>
+      </div>
       <p><%= markdown(@note.content).html_safe %></p>
       
 
@@ -44,8 +51,6 @@
           <% end %>
         </div>
       </div>
-      
-        <p><%= @note.tag_list %></p>
       
     </div>
   </div>

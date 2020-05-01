@@ -415,6 +415,23 @@
       font-size: 16px;
       line-height: 30px;
     }
+    .catego {
+      display: flex;
+      .category_btn {
+        border: 1px solid $sub;
+        text-align: left;
+        width: 50px;
+        margin-bottom: 30px;
+        margin-right: 5px;
+        background-color: $sub;
+        border-radius: 5px;
+        display: flex;
+        a {
+          padding-left: 3px;
+          color: white;
+        }
+      }
+    }
 
     .show_user {
       margin-top: 4px;
