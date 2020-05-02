@@ -18,68 +18,25 @@
 </div>
 
 
-
 <div class="homepage">
   <div class="container">
-
-<%# 人気順 %>
-    <div class="row">
-      <p class="favorite-text">人気の投稿</p>
-
-      <div style="display: flex" class="col l12">
-      
-        <div class="recommen_card">
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1587581911709-aff6e6b7af08?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
-            <div class="card-content">
-              <span class="card-title">Flaver text</span>
-              <p class="">description</p>
-            </div>
-          </div>
+    <p class="ninki_recommen">人気のレコメン</p>
+    <% @all_ranks.each do |note| %>
+    <a href="/notes/<%= note.id %>">
+      <div class="index_card" style="display: flex">
+        <div class="index_card_content">
+          <p class="card_title"><%= note.title %></p>
+          <p><%= note.content.truncate(37) %></p>
         </div>
-
-        <div class="recommen_card">
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1587581911709-aff6e6b7af08?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
-            <div class="card-content">
-              <span class="card-title">Flaver text</span>
-              <p class="">description</p>
-            </div>
-          </div>
-        </div>
-
+        <%= image_tag(note.image_url.url) %>
       </div>
-    </div>
+    </a>
+    <% end %>
+  </div>
+</div>
 
-<%# 人気二段目 %>
-    <div class="row">
-      <div style="display: flex" class="col l12">
-      
-        <div class="recommen_card">
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1587581911709-aff6e6b7af08?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
-            <div class="card-content">
-              <span class="card-title">Flaver text</span>
-              <p class="">description</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="recommen_card">
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1587581911709-aff6e6b7af08?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
-            <div class="card-content">
-              <span class="card-title">Flaver text</span>
-              <p class="">description</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-<%# 新着順 %>
+<div class="container">
+  <%# 新着順 %>
     <p class="new-text">新しい投稿</p>
 
     <% @notes.first(4).each do |note| %>
@@ -105,6 +62,5 @@
           </div>
         </div>
       </div>
-    <% end %>   
-  </div>
+    <% end %>  
 </div>
