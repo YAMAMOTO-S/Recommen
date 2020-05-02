@@ -106,12 +106,39 @@
         .index_card_content {
           p {
             padding: 0 20px 0 20px;
+            font-family: "ヒラギノ丸ゴ ProN",sans-serif;
           }
           .card_title {
             color: $main;
             font-weight: bold;
             font-size: 20px;
             font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+          }
+          .card_favs {
+            i {
+              padding-left: 20px;
+              padding-top: 12px;
+            }
+            p {
+              margin-left: 10px;
+            }
+          }
+          .catego {
+            display: flex;
+            .category_btn {
+              background: $sub;
+              display: inline-block;
+              border: 1px solid $sub;
+              margin-right: 5px;
+              border-radius: 5px;
+              display: flex;
+              height: 28px;
+              margin-top: 10px;
+              a {
+                line-height: 28px;
+                color: white;
+              }
+            }
           }
         }
         img {
