@@ -51,23 +51,24 @@
 
 
 
-<div class="container">
-  <%# 新着順 %>
-    <p class="new-text">新しい投稿</p>
 
+
+<%# 人気のレコメン %>
+<div class="homepage2">
+  <div class="container">
+    <p class="ninki_recommen">新着投稿</p></p>
     <% @notes.first(4).each do |note| %>
-      <div class="row">
-        <div class="new-card">
-          <div class="card" style="display: flex">
-            <div class="icon-image">
-                <li class="user_image"><%= image_tag(note.user.image.url, size: "40") %></li>
-              <p><i class="samll material-icons">thumb_up</i><%= note.favorites.count %></p>
+    <a href="/notes/<%= note.id %>">
+      <div class="index_card" style="display: flex">
+        <div class="index_card_content">
+          <p class="card_title"><%= note.title %></p>
+          <p><%= note.content.truncate(37) %></p>
+
+          <div class="favs_category" style="display: flex;">
+            <div class="card_favs" style="display: flex;">
+              <i class="samll material-icons">thumb_up</i>
+              <p><%= note.favorites.count %></p>
             </div>
-            <div class="card-content">
-              <a href="/notes/<%= note.id %>"><span class="card-title"><%= note.title %></span></a>
-              <a href="/notes/<%= note.id %>">
-                <p class=''><%= note.content.truncate(40)  %></p>
-              </a>
             <div class="catego">
               <% note.tag_list.each do |tag| %>
               <div class="category_btn">
@@ -77,6 +78,9 @@
             </div>
           </div>
         </div>
+        <%= image_tag(note.image_url.url) %>
       </div>
-    <% end %>  
+    </a>
+    <% end %>
+  </div>
 </div>
