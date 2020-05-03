@@ -134,9 +134,12 @@
               display: flex;
               height: 28px;
               margin-top: 10px;
+              padding: 5px;
               a {
                 line-height: 28px;
-                color: white;
+                color: $background;
+                font-weight: bold;
+                margin-top: -5px;
               }
             }
           }
@@ -207,9 +210,12 @@
               display: flex;
               height: 28px;
               margin-top: 10px;
+              padding: 5px;
               a {
                 line-height: 28px;
-                color: white;
+                color: $background;
+                font-weight: bold;
+                margin-top: -5px;
               }
             }
           }
@@ -485,9 +491,12 @@
         display: flex;
         height: 28px;
         margin-top: 10px;
+        padding: 5px;
         a {
           line-height: 28px;
-          color: white;
+          color: $background;
+          font-weight: bold;
+          margin-top: -5px;
         }
       }
     }
@@ -632,51 +641,89 @@
 
 // カテゴリー毎の一覧view
 .category_view {
-  margin: 0 auto;
-  width: 700px;
+  margin-bottom: 200px;
   .new-text {
-    text-align: center;
-    font-family: "Hiragino Sans", "Meiryo", "sans-serif";
-    font-weight: bold;
-    font-size: 25px;
-    padding: 30px 0;
+      text-align: center;
+      font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+      font-weight: bold;
+      font-size: 25px;
+      margin-top: 40px;
   }
-  .show_image {
-    margin-bottom: -10px;
-    img {
-      width: 700px;
-    }
-  }
-  .new-card {
-    margin-bottom: 40px;
-    .icon-image {
-      padding: 10px 0 0 10px;
-      i {
-        color: $sub;
+  .catego_card {
+    width: 600px;
+    height: 650px;
+    border-top: 1px $sub solid;
+    margin: 0 auto;
+    .catego_image {
+      padding-top: 50px;
+      text-align: center;
+      img {
+        text-align: center;
+        width: 550px;
+        height: 300px;
       }
     }
-  }
-  .card-content {
-    .card-title {
-      color: $main;
+    .catego_content {
+      .catego_content_title {
+        color: $main;
+        font-weight: bold;
+        font-size: 25px;
+        font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+      }
+      .catego_content_desc {
+        font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+        color: $text;
+      }
     }
-    a {
-      color: $text;
-    }
-    .catego {
+    .user_fav {
       display: flex;
-      .category_btn {
-        border: 1px solid $sub;
-        text-align: left;
-        width: 50px;
-        margin-top: 30px;
-        margin-right: 5px;
-        background-color: $sub;
-        border-radius: 5px;
+      .catego_user {
         display: flex;
-        a {
-          padding-left: 3px;
-          color: white;
+        img {
+          border-radius: 50%;
+          margin-right: 10px;
+          margin-top: 10px;
+        }
+        p {
+          font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+          font-size: 20px;
+          color: $text;
+          line-height: 82px;
+        }
+      }
+      .catego_fav {
+        height: 50px;
+        margin-top: 50px;
+        margin-left: 20px;
+        i {
+          color: $sub;
+        }
+        p {
+          font-weight: bold;
+          margin-top: 2px;
+          margin-left: 5px;
+        }
+      }
+      .catego {
+        display: flex;
+        padding-top: 35px;
+        margin-left: 15px;
+        .category_btn {
+          background: $sub;
+          display: inline-block;
+          border: 1px solid $sub;
+          margin-right: 5px;
+          border-radius: 5px;
+          display: flex;
+          height: 28px;
+          margin-top: 10px;
+          padding: 5px;
+          a {
+            line-height: 28px;
+            color: $background;
+            font-weight: bold;
+            margin-top: -5px;
+          }
         }
       }
     }

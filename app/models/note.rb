@@ -5,7 +5,7 @@ class Note < ApplicationRecord
   validates :content, presence: true
 
   belongs_to :user
-  has_many :favorites
+  has_many :favorites, dependent: :delete_all
   
   mount_uploader :image_url, ImageUploader
 

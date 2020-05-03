@@ -1,34 +1,38 @@
 
 <div class="container category_view">
-
   <p class="new-text"><%= params[:tag_name]%>一覧</p>
-      <% @notes.each do |note| %>
-        <div class="row">
-          <div class="show_image">
-            <%= image_tag(note.image_url.url, size: "300") %>
-          </div>
-          <div class="new-card">
-            <div class="card" style="display: flex">
-              <div class="icon-image">
-                  <li class="user_image"><%= image_tag(note.user.image.url, size: "40") %></li>
-                <p><i class="samll material-icons">thumb_up</i><%= note.favorites.count %></p>
-              </div>
-              <div class="card-content">
-                <a href="/notes/<%= note.id %>"><span class="card-title"><%= note.title %></span></a>
-                <a href="/notes/<%= note.id %>">
-                  <p class=''><%= note.content.truncate(40)  %></p>
-                </a>
+  
+  <% @notes.each do |note|  %>
+    <div class="catego_card">
+      <div class="catego_image">
+        <a href="/notes/<%= note.id %>"><%= image_tag(note.image_url.url, size: "200") %></a>
+      </div>
+      <a href="/notes/<%= note.id %>">
+      <div class="catego_content">
+        <p class="catego_content_title"><%= note.title %></p>
+        <p class="catego_content_desc"><%= note.content.truncate(120) %></p>
+      </div>
+      </a>
 
-                <div class="catego">
-                  <% note.tag_list.each do |tag| %>
-                  <div class="category_btn">
-                    <%= link_to tag, notes_path(tag_name: tag) %>
-                  </div>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="user_fav">
+        <div class="catego_user">
+          <a href="/users/<%= note.user.id %>"><p class="show_user_image">
+            <%= image_tag(note.user.image.url, size: "50") %></p>
+          </a>
+          <a href="/users/<%= note.user.id %>"><p><%= note.user.nickname %></p></a>
         </div>
-      <% end %>   
+        <div class="catego_fav" style="display: flex;">
+          <i class="samll material-icons">thumb_up</i>
+          <p><%= note.favorites.count %></p>
+        </div>
+        <div class="catego">
+          <% note.tag_list.each do |tag| %>
+          <div class="category_btn">
+            <%= link_to tag, notes_path(tag_name: tag) %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>

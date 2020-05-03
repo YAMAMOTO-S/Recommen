@@ -24,7 +24,7 @@
     <% @all_ranks.first(4).each do |note| %>
     <a href="/notes/<%= note.id %>">
       <div class="index_card" style="display: flex">
-        <div class="index_card_content">
+        <div class="index_card_content" style="max-width: 530px;">
           <p class="card_title"><%= note.title %></p>
           <p><%= note.content.truncate(80) %></p>
 
@@ -42,7 +42,9 @@
             </div>
           </div>
         </div>
-        <%= image_tag(note.image_url.url) %>
+        <div>
+          <%= image_tag(note.image_url.url) %>
+        </div>
       </div>
     </a>
     <% end %>
@@ -60,7 +62,7 @@
     <% @notes.first(4).each do |note| %>
     <a href="/notes/<%= note.id %>">
       <div class="index_card" style="display: flex">
-        <div class="index_card_content">
+        <div class="index_card_content" style="max-width: 530px;">
           <p class="card_title"><%= note.title %></p>
           <p><%= note.content.truncate(80) %></p>
 
@@ -78,7 +80,9 @@
             </div>
           </div>
         </div>
-        <%= image_tag(note.image_url.url) %>
+        <div>
+          <%= image_tag(note.image_url.url) %>
+        </div>
       </div>
     </a>
     <% end %>
