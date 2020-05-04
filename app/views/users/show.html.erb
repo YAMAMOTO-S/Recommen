@@ -26,7 +26,8 @@
 </div>
 
 <div class="user-back">
-  <div class="user-notes">
+  <div class="container">
+    <div class="user-notes">
     <p>作成したレコメン</p>
     <% if @notes %>
       <% @notes.each do |note| %>
@@ -35,29 +36,28 @@
           <a href="/notes/<%= note.id %>"><p class="disc"><%= note.content.truncate(40)  %></p></a>
         </div><br>
       <% end %>
-      <% else %>
-        <div class="user-card">
-          <p class="tit">まだ投稿されていません。</p>
-          <p class="disc"></p>
-        </div>
+    <% else %>
+      <div class="user-card">
+        <p class="tit">まだ投稿されていません。</p>
+        <p class="disc"></p>
+      </div>
     <% end %>
 
     <p>いいねしたレコメン</p>
 
       <% if @favorite_notes %>
-      <% @favorite_notes.each do |fav_note| %>
+        <% @favorite_notes.each do |fav_note| %>
         <div class="user-card">
           <a href="/notes/<%= fav_note.id %>"><p class="tit"><%= fav_note.title %></p></a>
           <a href="/notes/<%= fav_note.id %>"><p class="disc"><%= fav_note.content.truncate(40)  %></p></a>
         </div><br>
-      <% end %>
+        <% end %>
       <% else %>
-        <div class="user-card">
-          <p class="tit">いいねしたレコメンはありません。</p>
-          <p class="disc"></p>
-        </div>
+      <div class="user-card">
+        <p class="tit">まだ投稿されていません。</p>
+        <p class="disc"></p>
+      </div>
     <% end %>
   </div>
+  </div>
 </div>
-
-<div class="user_foot"></div>

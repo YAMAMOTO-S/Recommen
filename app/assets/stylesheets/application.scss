@@ -408,9 +408,10 @@
   margin-top: 40px;
   max-width: 100%;
   background-color: $background;
+  padding-bottom: 40px;
   .user-notes {
     max-width: 50%;
-    margin-left: 550px;
+    margin: 0 auto;
     p {
       font-family: "Hiragino Sans", "Meiryo", "sans-serif";
       font-weight: bold;
