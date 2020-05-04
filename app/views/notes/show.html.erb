@@ -51,6 +51,13 @@
           <% end %>
         </div>
       </div>
+
+      <% if current_user %>
+        <%= form_with(model: [@note, @comment], local: true) do |f| %>
+          <%= f.text_area :text, placeholder: "コメントする" %>
+          <%= f.submit "送信" %>
+        <% end %>
+      <% end %>
       
     </div>
   </div>

@@ -13,6 +13,6 @@ class Note < ApplicationRecord
     favorites.where(user_id: user.id).exists?
   end
 
-  has_many :comments
+  has_many :comments, dependent: :delete_all
   
 end
