@@ -503,8 +503,8 @@
 
     .show_user {
       margin-top: 4px;
-      border-top: 2px solid $last;
-      border-bottom: 2px solid $last;
+      border-top: 1px solid $sub;
+      border-bottom: 1px solid $sub;
       padding-left: 10px;
       .show_user_image {
         img {
@@ -517,7 +517,7 @@
       .show_user_name {
         margin-left: 10px;
         .user_namename {
-          font-weight: bold;
+          color: $main;
           font-size: 20px;
           margin-bottom: -5px;
         }
@@ -525,6 +525,55 @@
           font-size: 13px;
           color: $text;
           line-height: 20px;
+          font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+        }
+      }
+    }
+    .comments {
+      margin-top: 170px;
+      padding-top: 20px;
+      .comment_user {
+        display: flex;
+        img {
+          border-radius: 50%;
+        }
+        .nickname_created {
+          margin-top: -15px;
+          margin-left: 10px;
+          p {
+            font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+            font-size: 13px;
+            color: $text;
+          }
+          .coment_text {
+            margin-top: -30px;
+          }
+        }
+      }
+      .comment_content {
+        margin-top: -15px;
+        margin-left: 50px;
+        color: $main;
+        font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+      }
+    }
+    .comment_submit {
+      margin-top: 50px;
+      .comment_submit_form {
+        img {
+          border-radius: 50%;
+        }
+        textarea {
+          margin-left: 10px;
+          border: 0px none;
+        }
+      }
+      .comment_submit_btn {
+        margin-left: 670px;
+        input {
+          border: 0px none;
+          background-color: $background;
+          color: $text;
         }
       }
     }
