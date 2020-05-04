@@ -506,6 +506,7 @@
       border-top: 1px solid $sub;
       border-bottom: 1px solid $sub;
       padding-left: 10px;
+      margin-bottom: 150px;
       .show_user_image {
         img {
           border-radius: 50%;
@@ -530,7 +531,7 @@
       }
     }
     .comments {
-      margin-top: 170px;
+      margin-top: 10px;
       padding-top: 20px;
       .comment_user {
         display: flex;
@@ -728,6 +729,7 @@
       display: flex;
       .catego_user {
         display: flex;
+        margin-top: 10px;
         img {
           border-radius: 50%;
           margin-right: 10px;
@@ -735,7 +737,7 @@
         }
         p {
           font-family: "ヒラギノ丸ゴ ProN",sans-serif;
-          font-size: 20px;
+          font-size: 15px;
           color: $text;
           line-height: 82px;
         }
