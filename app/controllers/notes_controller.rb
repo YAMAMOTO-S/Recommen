@@ -7,6 +7,8 @@ class NotesController < ApplicationController
 
   def show
     @note = Note.find(params[:id])
+    @comment = Comment.new
+    @comments = @note.comments
   end
 
   def new

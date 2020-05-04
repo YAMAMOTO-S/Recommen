@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :favorite_notes, through: :favorites, source: :note
   mount_uploader :image, ImageUploader
+
+  has_many :comments
 end
