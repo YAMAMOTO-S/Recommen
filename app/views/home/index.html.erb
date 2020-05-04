@@ -48,6 +48,14 @@
       </div>
     </a>
     <% end %>
+    <p class="famous_catego_title">人気のカテゴリー</p>
+    <div class="famous_catego">
+      <% @tags.each do |tag| %>
+        <div class="category_btn">
+          <%= link_to tag.name, notes_path(tag_name: tag.name) %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 
@@ -55,7 +63,7 @@
 
 
 
-<%# 人気のレコメン %>
+<%# 新着のれこめん %>
 <div class="homepage2">
   <div class="container">
     <p class="ninki_recommen">新着投稿</p></p>

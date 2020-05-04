@@ -9,6 +9,7 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
     @comment = Comment.new
     @comments = @note.comments
+    @tags = ActsAsTaggableOn::Tag.most_used(10)
   end
 
   def new
