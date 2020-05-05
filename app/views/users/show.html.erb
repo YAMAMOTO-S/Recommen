@@ -27,8 +27,8 @@
         <% end %>
       </div>
       <div class="coutn_follow" style="display: flex;">
-        <p class="follow-count">Follow: <%= @f_user.count %></p>
-        <p>Follower: <%= @ed_user.count %></p>
+        <p class="follow-count"><%=link_to "Follow: #{@f_user.count}", follows_user_path(@user.id) %></p>
+        <p><%=link_to "Follower: #{@ed_user.count}", followers_user_path(@user.id) %></p>
       </div>
       <div class="user_description">
         <% if @user.description? %>
