@@ -9,13 +9,28 @@
         <% end %>
       <% end %>
     </div>
-    <div class="name_btn">
+
+    <div class="name_btn" style="display: flex;">
       <p><%= @nickname %></p>
       <div class="folow_follower">
-        <a href="#">フォロー</a>
-        <a href="#">フォロワー</a>
+        <% if current_user != @user %>
+          <% if @user.followed_by?(current_user) %>
+            <div class="following_btn">
+              <p><%=link_to "Following", user_relationships_path(@user.id), method: :delete %></p>
+            </div>
+          <% else %>
+            <div class="following_btn">
+              <p><%=link_to "Follow", user_relationships_path(@user.id), method: :post %></p>
+            </div>
+          <% end %>
+        <% end %>
+              <div style="display: flex;">
+        <p>にんずう</p>
+        <p>にんずう</p>
+      </div>
       </div>
     </div>
+
   </div>
   <div class="user_desc">
     <% if @user.description? %>
