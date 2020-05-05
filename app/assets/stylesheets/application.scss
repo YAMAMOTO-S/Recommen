@@ -368,41 +368,98 @@
 
 
 // 個人ページ
-.user_image {
-  img {
-    border-radius: 50%;
-  }
-  list-style: none;
-}
-.name_img {
-  margin-left: 300px;
+// .user_image {
+//   img {
+//     border-radius: 50%;
+//   }
+//   list-style: none;
+// }
+// .name_img {
+//   margin-left: 300px;
+//   margin-top: 40px;
+//   .name_btn {
+//     p {
+//       font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+//       font-weight: bold;
+//       margin-left: 30px;
+//       font-size: 25px;
+//       margin-top: 5px;
+//     }
+//     .folow_follower  {
+//       margin-top: -20px;
+//       margin-left: 30px;
+//     }
+//   }
+//   .user_edit {
+//     p {
+//       margin-left: 8px;
+//       background-color: $sub;
+//     }
+//   }
+// }
+// .user_desc {
+//   margin-left: 410px;
+//   color: $text;
+//   font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+//   margin-top: -70px;
+// }
+.user_card {
+  margin: 0 auto;
+  width: 600px;
   margin-top: 40px;
-  .name_btn {
-    p {
-      font-family: "Hiragino Sans", "Meiryo", "sans-serif";
-      font-weight: bold;
-      margin-left: 30px;
-      font-size: 25px;
-      margin-top: 5px;
+  .image_edit {
+    margin-left: -90px;
+    margin-top: 20px;
+    margin-right: 10px;
+    img {
+      border-radius: 50%;
     }
-    .folow_follower  {
-      margin-top: -20px;
-      margin-left: 30px;
-    }
-  }
-  .user_edit {
     p {
       margin-left: 8px;
       background-color: $sub;
     }
   }
+  .user_right {
+    .name_btn {
+      .user_name {
+        ont-family: "Hiragino Sans", "Meiryo", "sans-serif";
+        font-weight: bold;
+        font-size: 25px;
+        margin-left: 10px;
+      }
+      .following_btn {
+        height: 30px;
+        width: 70px;
+        background-color: $sub;
+        border-radius: 10px;
+        margin-top: 25px;
+        margin-left: 10px;
+        p {
+          margin-top: 4px;
+          text-align: center;
+        }
+        a {
+          color: $background;
+        }
+      }
+    }
+    .coutn_follow {
+      margin-top: -30px;
+      margin-left: 10px;
+      p {
+        font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+        margin-right: 10px;
+      }
+    }
+    .user_description {
+      margin-left: 10px;
+      p {
+        font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+      }
+    }
+  }
 }
-.user_desc {
-  margin-left: 410px;
-  color: $text;
-  font-family: "ヒラギノ丸ゴ ProN",sans-serif;
-  margin-top: -70px;
-}
+
 
 .user-back {
   margin-top: 40px;

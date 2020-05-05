@@ -1,8 +1,9 @@
-<div class="container">
-
-  <div style="display: flex" class="name_img">
-    <div class="user_edit">
-      <li class="user_image"><%= image_tag(@user.image.url, size: "80") %></li>
+<div class="user_card">
+  <div class="container" style="display: flex;">
+    <div class="image_edit">
+      <div>
+        <%= image_tag(@user.image.url, size: "80") %>
+      </div>
       <% if current_user.id == @user.id %>
         <%= link_to "/users/#{current_user.id}/edit" do %>
           <p class="waves-light btn-small flat">変更</p>
@@ -10,9 +11,9 @@
       <% end %>
     </div>
 
-    <div class="name_btn" style="display: flex;">
-      <p><%= @nickname %></p>
-      <div class="folow_follower">
+    <div class="user_right">
+      <div class="name_btn" style="display: flex;">
+        <p class="user_name"><%= @user.nickname %></p>
         <% if current_user != @user %>
           <% if @user.followed_by?(current_user) %>
             <div class="following_btn">
@@ -24,21 +25,20 @@
             </div>
           <% end %>
         <% end %>
-              <div style="display: flex;">
-        <p>にんずう</p>
-        <p>にんずう</p>
       </div>
+      <div class="coutn_follow" style="display: flex;">
+        <p class="follow-count">Follow: <%= @f_user.count %></p>
+        <p>Follower: <%= @ed_user.count %></p>
+      </div>
+      <div class="user_description">
+        <% if @user.description? %>
+          <p><%= markdown(@user.description).html_safe %></p>
+        <% end %>
       </div>
     </div>
-
   </div>
-  <div class="user_desc">
-    <% if @user.description? %>
-      <p><%= markdown(@user.description).html_safe %></p>
-    <% end %>
-  </div>
-
 </div>
+
 
 <div class="user-back">
   <div class="container">
