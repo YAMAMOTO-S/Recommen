@@ -1,0 +1,28 @@
+<div class="follow">
+  <div class="container">
+    <div class="follow_card" style="display: flex;">
+      <% @users.each do |user| %>
+      <div class="follow_img">
+        <%= image_tag(user.image.url, size: "60") %>
+      </div>
+      <div class="follow_disc">
+        <p class="follow_disc_name"><%= user.nickname %></p>
+        <p class="follow_disc_disc"><%= user.description.truncate(19) %></p>
+      </div>
+      <div class="follow_btn">
+        <% if current_user != user %>
+          <% if user.followed_by?(current_user) %>
+            <div class="following_btn">
+              <p><%=link_to "Following", user_relationships_path(user.id), method: :delete %></p>
+            </div>
+          <% else %>
+            <div class="following_btn">
+              <p><%=link_to "Follow", user_relationships_path(user.id), method: :post %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

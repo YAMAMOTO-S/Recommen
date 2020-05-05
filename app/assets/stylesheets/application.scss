@@ -368,41 +368,101 @@
 
 
 // 個人ページ
-.user_image {
-  img {
-    border-radius: 50%;
-  }
-  list-style: none;
-}
-.name_img {
-  margin-left: 300px;
+// .user_image {
+//   img {
+//     border-radius: 50%;
+//   }
+//   list-style: none;
+// }
+// .name_img {
+//   margin-left: 300px;
+//   margin-top: 40px;
+//   .name_btn {
+//     p {
+//       font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+//       font-weight: bold;
+//       margin-left: 30px;
+//       font-size: 25px;
+//       margin-top: 5px;
+//     }
+//     .folow_follower  {
+//       margin-top: -20px;
+//       margin-left: 30px;
+//     }
+//   }
+//   .user_edit {
+//     p {
+//       margin-left: 8px;
+//       background-color: $sub;
+//     }
+//   }
+// }
+// .user_desc {
+//   margin-left: 410px;
+//   color: $text;
+//   font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+//   margin-top: -70px;
+// }
+.user_card {
+  margin: 0 auto;
+  width: 600px;
   margin-top: 40px;
-  .name_btn {
-    p {
-      font-family: "Hiragino Sans", "Meiryo", "sans-serif";
-      font-weight: bold;
-      margin-left: 30px;
-      font-size: 25px;
-      margin-top: 5px;
+  .image_edit {
+    margin-left: -90px;
+    margin-top: 20px;
+    margin-right: 10px;
+    img {
+      border-radius: 50%;
     }
-    .folow_follower  {
-      margin-top: -20px;
-      margin-left: 30px;
-    }
-  }
-  .user_edit {
     p {
       margin-left: 8px;
       background-color: $sub;
     }
   }
+  .user_right {
+    .name_btn {
+      .user_name {
+        ont-family: "Hiragino Sans", "Meiryo", "sans-serif";
+        font-weight: bold;
+        font-size: 25px;
+        margin-left: 10px;
+      }
+      .following_btn {
+        height: 30px;
+        width: 70px;
+        background-color: $sub;
+        border-radius: 10px;
+        margin-top: 25px;
+        margin-left: 10px;
+        p {
+          margin-top: 4px;
+          text-align: center;
+        }
+        a {
+          color: $background;
+        }
+      }
+    }
+    .coutn_follow {
+      margin-top: -30px;
+      margin-left: 10px;
+      a {
+        font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+        margin-right: 10px;
+        color: $text;
+      }
+    }
+    .user_description {
+      margin-left: 10px;
+      margin-top: -10px;
+      p {
+        font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+        color: $text;
+      }
+    }
+  }
 }
-.user_desc {
-  margin-left: 410px;
-  color: $text;
-  font-family: "ヒラギノ丸ゴ ProN",sans-serif;
-  margin-top: -70px;
-}
+
 
 .user-back {
   margin-top: 40px;
@@ -817,4 +877,54 @@
   margin: 0 auto;
   margin-bottom: -150px;
   margin-top: 50px;
+}
+
+//フォロー一覧
+.follow {
+  margin: 0 auto;
+  max-width: 550px;
+  margin-top: 50px;
+  background-color: $background;
+  width: 100%;
+  .follow_card {
+    .follow_img {
+      img {
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-left: -50px;
+      }
+    }
+    .follow_disc {
+      margin-left: 10px;
+      .follow_disc_name {
+        color: $main;
+        font-size: 19px;
+        margin-bottom: -15px;
+      }
+      .follow_disc_name {
+        color: $text;
+        width: 250px;
+      }
+      p {
+        color: $text;
+      }
+    }
+    .follow_btn {
+      .following_btn {
+        height: 30px;
+        width: 70px;
+        background-color: $sub;
+        border-radius: 10px;
+        margin-top: 25px;
+        margin-left: 80px;
+        p {
+          text-align: center;
+          padding-top: 4px;
+        }
+        a {
+          color: $background;
+        }
+      }
+    }
+  }
 }

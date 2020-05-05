@@ -1,29 +1,44 @@
-<div class="container">
-
-  <div style="display: flex" class="name_img">
-    <div class="user_edit">
-      <li class="user_image"><%= image_tag(@user.image.url, size: "80") %></li>
+<div class="user_card">
+  <div class="container" style="display: flex;">
+    <div class="image_edit">
+      <div>
+        <%= image_tag(@user.image.url, size: "80") %>
+      </div>
       <% if current_user.id == @user.id %>
         <%= link_to "/users/#{current_user.id}/edit" do %>
           <p class="waves-light btn-small flat">変更</p>
         <% end %>
       <% end %>
     </div>
-    <div class="name_btn">
-      <p><%= @nickname %></p>
-      <div class="folow_follower">
-        <a href="#">フォロー</a>
-        <a href="#">フォロワー</a>
+
+    <div class="user_right">
+      <div class="name_btn" style="display: flex;">
+        <p class="user_name"><%= @user.nickname %></p>
+        <% if current_user != @user %>
+          <% if @user.followed_by?(current_user) %>
+            <div class="following_btn">
+              <p><%=link_to "Following", user_relationships_path(@user.id), method: :delete %></p>
+            </div>
+          <% else %>
+            <div class="following_btn">
+              <p><%=link_to "Follow", user_relationships_path(@user.id), method: :post %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="coutn_follow" style="display: flex;">
+        <p class="follow-count"><%=link_to "Follow: #{@f_user.count}", follows_user_path(@user.id) %></p>
+        <p><%=link_to "Follower: #{@ed_user.count}", followers_user_path(@user.id) %></p>
+      </div>
+      <div class="user_description">
+        <% if @user.description? %>
+          <p><%= markdown(@user.description).html_safe %></p>
+        <% end %>
       </div>
     </div>
   </div>
-  <div class="user_desc">
-    <% if @user.description? %>
-      <p><%= markdown(@user.description).html_safe %></p>
-    <% end %>
-  </div>
-
 </div>
+
 
 <div class="user-back">
   <div class="container">
