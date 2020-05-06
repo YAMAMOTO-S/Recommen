@@ -10,6 +10,8 @@
         <p class="follow_disc_disc"><%= user.description.truncate(19) %></p>
       </div>
       <div class="follow_btn">
+      <% if user_signed_in? %>
+
         <% if current_user != user %>
           <% if user.followed_by?(current_user) %>
             <div class="following_btn">
@@ -21,6 +23,7 @@
             </div>
           <% end %>
         <% end %>
+      <% end %>
       </div>
       <% end %>
     </div>
