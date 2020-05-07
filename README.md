@@ -1,24 +1,27 @@
-# README
+アプリケーションの概要
+---
+このアプリは自分のとっておきを全力で紹介するサービスです。<br>
+サイトURL: http://18.181.11.87/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+使用技術一覧
+---
+**フロントエンド**  
+・HTML, Sass, JavaScript, JQuery  
+**バックエンド**  
+・Ruby, Ruby on rails  
+**本番環境**  
+・AWS(VPC, EC2, RDS, S3)
+<br>
 
-Things you may want to cover:
+機能一覧
+---  
+・ユーザー登録, ログイン, ロ グアウト, ユーザーの編集機能(devise使用)  
+・記事投稿, 編集, 削除, 詳細表示機能  
+・S3への画像アップロード機能(carrierwave使用)  
+・記事のプレビュー機能    
+・いいね機能(非同期)  
+・コメント機能  
+・カテゴリー登録, 編集, 削除機能  
+・カテゴリー検索機能  
+・フォロー, フォロワー機能
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

@@ -776,7 +776,21 @@
     }
   }
 }
-
+.kigyou {
+  background-color: $background;
+  height: 100px;
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  p {
+    color: $text;
+    font-size: 13px;
+  }
+  .kigyou_pw {
+    padding-top: 10px;
+  }
+}
 
 
 // カテゴリー毎の一覧view
